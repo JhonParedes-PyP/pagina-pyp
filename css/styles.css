@@ -5,19 +5,19 @@
 
 /* === VARIABLES === */
 :root {
-    --navy:        #1B2A4A;
-    --navy-dark:   #0f1c35;
-    --navy-light:  #243b6e;
-    --gold:        #C9A03E;
-    --gold-light:  #E6C065;
+    --navy:        #0A2C48;
+    --navy-dark:   #061b2e;
+    --navy-light:  #0d3a5f;
+    --gold:        #629BD0;
+    --gold-light:  #84b4dc;
     --gray:        #4A5568;
     --gray-light:  #718096;
-    --light-bg:    #F4F6FA;
+    --light-bg:    #f0f5fa;
     --white:       #FFFFFF;
     --text-dark:   #1a202c;
-    --border:      #e2e8f0;
-    --shadow:      0 4px 20px rgba(27, 42, 74, 0.10);
-    --shadow-lg:   0 12px 40px rgba(27, 42, 74, 0.18);
+    --border:      #d0e0ef;
+    --shadow:      0 4px 20px rgba(10, 44, 72, 0.12);
+    --shadow-lg:   0 12px 40px rgba(10, 44, 72, 0.20);
     --transition:  all 0.3s ease;
     --radius:      12px;
     --radius-sm:   8px;
@@ -196,24 +196,16 @@ img { max-width: 100%; display: block; }
     flex-shrink: 0;
 }
 
-.logo-badge {
-    width: 48px;
+.logo-img {
     height: 48px;
-    background: var(--gold);
-    color: var(--white);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 0.95rem;
+    width: auto;
     border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-shrink: 0;
-    letter-spacing: -0.5px;
     transition: var(--transition);
+    object-fit: contain;
 }
 
-.logo:hover .logo-badge {
+.logo:hover .logo-img {
     transform: scale(1.05);
 }
 
