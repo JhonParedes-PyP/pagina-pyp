@@ -217,3 +217,35 @@
     }
 
 })();
+    /* ===== LIGHTBOX ===== */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const triggers = document.querySelectorAll('.lightbox-trigger');
+
+    if (lightbox && lightboxImg && lightboxClose) {
+        triggers.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+                setTimeout(() => {
+                    lightbox.style.opacity = '1';
+                }, 10);
+            });
+        });
+
+        const closeLightbox = () => {
+            lightbox.style.opacity = '0';
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+                lightboxImg.src = '';
+            }, 300);
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
