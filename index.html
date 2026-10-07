@@ -277,15 +277,55 @@
                 <p class="section-subtitle">Buscamos talento apasionado por el derecho y la gestión de cobranzas. Si quieres formar parte de Prada &amp; Paredes, envíanos tu hoja de vida.</p>
             </div>
             <div class="work-content">
-                <div class="work-card reveal">
-                    <div class="work-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Envíanos tu CV</h3>
-                    <p>Mándanos tu currículum vitae y te contactaremos cuando tengamos una vacante que se ajuste a tu perfil profesional y experiencia.</p>
-                    <a href="mailto:cobranzas@pypsolucionesjuridicas.com?subject=Postulación%20CV" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i> Postular ahora
-                    </a>
+                <div class="work-form-wrap" style="background: var(--white); border-radius: var(--radius); padding: 42px 38px; box-shadow: var(--shadow); border: 1px solid var(--border); max-width: 650px; width: 100%; margin: 0 auto;">
+                    <form action="https://formsubmit.co/cobranzas@pypsolucionesjuridicas.com" method="POST" enctype="multipart/form-data">
+                        <!-- Configuraciones de FormSubmit -->
+                        <input type="hidden" name="_subject" value="Nueva Postulación de Trabajo">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <!-- Descomentar y ajustar esto si deseas redirección automática al terminar
+                        <input type="hidden" name="_next" value="https://pypsolucionesjuridicas.com/"> -->
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="candidate-name">Nombre completo *</label>
+                                <input type="text" id="candidate-name" name="Nombre" placeholder="Tu nombre y apellidos" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="candidate-phone">Teléfono / Celular *</label>
+                                <input type="tel" id="candidate-phone" name="Telefono" placeholder="Tu número" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="candidate-email">Correo electrónico *</label>
+                                <input type="email" id="candidate-email" name="Email" placeholder="tu@correo.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="candidate-position">Vacante a postular *</label>
+                                <select id="candidate-position" name="Puesto" required>
+                                    <option value="">Seleccione un puesto...</option>
+                                    <option value="Asistente Legal">Asistente Legal</option>
+                                    <option value="Gestor de Cobranza">Gestor de Cobranza</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="candidate-cv">Adjuntar CV (PDF o Word) *</label>
+                            <input type="file" id="candidate-cv" name="CV_Adjunto" accept=".pdf,.doc,.docx" required style="padding: 10px; background: #f8fafc;">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="candidate-message">Mensaje breve (Opcional)</label>
+                            <textarea id="candidate-message" name="Mensaje" rows="3" placeholder="Cuéntanos por qué te gustaría unirte a nuestro equipo..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full" style="margin-top: 10px;">
+                            <i class="fas fa-paper-plane"></i> Enviar Postulación
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
