@@ -116,6 +116,7 @@
     const form = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
     const submitBtn = document.getElementById('submitBtn');
+    const formErrorSend = document.getElementById('formErrorSend');
 
     if (form) {
         form.addEventListener('submit', function (e) {
@@ -138,21 +139,40 @@
                 return;
             }
 
-            // Simulate sending (replace with actual backend/service integration)
+            // Send via FormSubmit (AJAX endpoint of the form's action URL)
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            formSuccess.style.display = 'none';
+            formErrorSend.style.display = 'none';
 
-            setTimeout(function () {
-                form.reset();
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Consulta';
-                formSuccess.style.display = 'flex';
+            const ajaxUrl = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
 
-                // Hide success message after 7 seconds
-                setTimeout(function () {
-                    formSuccess.style.display = 'none';
-                }, 7000);
-            }, 1600);
+            fetch(ajaxUrl, {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(form)
+            })
+                .then(function (res) {
+                    if (!res.ok) throw new Error('HTTP ' + res.status);
+                    return res.json();
+                })
+                .then(function (data) {
+                    if (String(data.success) !== 'true') throw new Error(data.message || 'Error');
+                    form.reset();
+                    formSuccess.style.display = 'flex';
+
+                    // Hide success message after 7 seconds
+                    setTimeout(function () {
+                        formSuccess.style.display = 'none';
+                    }, 7000);
+                })
+                .catch(function () {
+                    formErrorSend.style.display = 'flex';
+                })
+                .finally(function () {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Consulta';
+                });
         });
     }
 
@@ -245,6 +265,11 @@
         lightboxClose.addEventListener('click', closeLightbox);
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.style.display === 'flex') {
                 closeLightbox();
             }
         });
