@@ -6,8 +6,9 @@
     <meta name="description" content="Prada & Paredes Soluciones Jurídico Empresariales - Expertos en cobranza extrajudicial, judicial, recuperación de cartera y asesoría legal.">
     <meta name="keywords" content="cobranza extrajudicial, cobranza judicial, recuperación de cartera, asesoría legal, negociación de deudas, representación legal">
     <title>Prada &amp; Paredes | Soluciones Jurídico Empresariales</title>
-    <link rel="icon" type="image/png" href="favicon.png?v=2">
-    <link rel="shortcut icon" type="image/png" href="favicon.png?v=2">
+    <link rel="icon" type="image/png" href="favicon.png?v=3">
+    <link rel="shortcut icon" type="image/png" href="favicon.png?v=3">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -20,7 +21,7 @@
     <nav id="navbar">
         <div class="container nav-container">
             <a href="#inicio" class="logo">
-                <img src="logo pyp.png" alt="Prada & Paredes Logo" class="logo-img">
+                <img src="img/logo-pp.png" alt="Prada &amp; Paredes" class="logo-img" width="48" height="48">
                 <div class="logo-text">
                     <span class="logo-main">Prada &amp; Paredes</span>
                     <span class="logo-sub">Soluciones Jurídico Empresariales</span>
@@ -73,23 +74,23 @@
                     <i class="fas fa-briefcase"></i> Nuestros Servicios
                 </a>
                 <a href="#contacto" class="btn btn-outline">
-                    <i class="fas fa-comments"></i> Consulta Gratuita
+                    <i class="fas fa-comments"></i> Solicitar Asesoría
                 </a>
             </div>
             <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">+500</span>
-                    <span class="stat-label">Casos Resueltos</span>
-                </div>
-                <div class="stat-divider"></div>
                 <div class="stat">
                     <span class="stat-number">+10</span>
                     <span class="stat-label">Años de Experiencia</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat">
-                    <span class="stat-number">95%</span>
-                    <span class="stat-label">Tasa de Éxito</span>
+                    <span class="stat-number"><i class="fas fa-headset"></i></span>
+                    <span class="stat-label">Call Center y<br>CRM Propios</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number"><i class="fas fa-gavel"></i></span>
+                    <span class="stat-label">Cobranza Judicial<br>y Extrajudicial</span>
                 </div>
             </div>
         </div>
@@ -193,7 +194,7 @@
                     <span class="section-tag">Quiénes Somos</span>
                     <h2 class="section-title about-title">Prada &amp; Paredes<br>Soluciones Jurídico Empresariales</h2>
                     <p class="about-text">
-                        Somos una firma líder y altamente especializada en la <strong>recuperación y cobranza de deudas para entidades financieras</strong>. Nuestro equipo de expertos trabaja con rigor, ética y compromiso para maximizar la recuperación de los activos de bancos, financieras y cajas municipales.
+                        Somos una firma altamente especializada en la <strong>recuperación y cobranza de deudas para entidades financieras</strong>. Nuestro equipo de expertos trabaja con rigor, ética y compromiso para maximizar la recuperación de los activos de bancos, financieras y cajas municipales.
                     </p>
                     <p class="about-text">
                         En <strong>Prada &amp; Paredes</strong>, entendemos la dinámica y las exigencias del sector financiero. Por eso, desarrollamos estrategias de cobranza masiva, extrajudicial y judicial altamente efectivas, garantizando resultados medibles y resguardando la reputación de nuestros clientes institucionales.
@@ -283,6 +284,7 @@
                         <input type="hidden" name="_subject" value="Nueva Postulación de Trabajo">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                         <!-- Descomentar y ajustar esto si deseas redirección automática al terminar
                         <input type="hidden" name="_next" value="https://pypsolucionesjuridicas.com/"> -->
 
@@ -358,10 +360,10 @@
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-globe"></i></div>
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
-                            <span class="contact-label">Sitio Web</span>
-                            <span class="contact-value">www.pypsolucionesjuridicas.com</span>
+                            <span class="contact-label">Oficina</span>
+                            <span class="contact-value">Santiago de Surco, Lima</span>
                         </div>
                     </div>
                     <div class="contact-social">
@@ -387,7 +389,10 @@
                 </div>
                 <!-- Form -->
                 <div class="contact-form-wrap">
-                    <form id="contactForm" novalidate>
+                    <form id="contactForm" action="https://formsubmit.co/cobranzas@pypsolucionesjuridicas.com" method="POST" novalidate>
+                        <input type="hidden" name="_subject" value="Nueva consulta desde la página web">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Nombre completo *</label>
@@ -412,12 +417,12 @@
                             <label for="service">Servicio de interés</label>
                             <select id="service" name="service">
                                 <option value="">Seleccione un servicio...</option>
-                                <option value="cobranza-extrajudicial">Cobranza Extrajudicial</option>
-                                <option value="cobranza-judicial">Cobranza Judicial</option>
-                                <option value="asesoria-legal">Asesoría Legal / Jurídica</option>
-                                <option value="recuperacion-cartera">Recuperación de Cartera</option>
-                                <option value="negociacion-deudas">Negociación de Deudas</option>
-                                <option value="representacion-legal">Representación Legal</option>
+                                <option value="Cobranza Extrajudicial">Cobranza Extrajudicial</option>
+                                <option value="Cobranza Judicial">Cobranza Judicial</option>
+                                <option value="Asesoría Legal / Jurídica">Asesoría Legal / Jurídica</option>
+                                <option value="Recuperación de Cartera">Recuperación de Cartera</option>
+                                <option value="Negociación de Deudas">Negociación de Deudas</option>
+                                <option value="Representación Legal">Representación Legal</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -430,6 +435,10 @@
                         <div id="formSuccess" class="form-success" style="display:none;">
                             <i class="fas fa-check-circle"></i>
                             ¡Mensaje enviado con éxito! Nos comunicaremos con usted a la brevedad.
+                        </div>
+                        <div id="formErrorSend" class="form-success" style="display:none; color:#c0392b; background:rgba(192,57,43,0.08); border-color:rgba(192,57,43,0.3);">
+                            <i class="fas fa-exclamation-circle"></i>
+                            No se pudo enviar el mensaje. Escríbanos por WhatsApp al +51 992 274 493 o a cobranzas@pypsolucionesjuridicas.com.
                         </div>
                     </form>
                 </div>
@@ -446,7 +455,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <h3>Visítenos o Contáctenos</h3>
-                    <p>Calle Las Frágatas 204, Urb. San Pedro, Santiago de Surco, Lima</p>
+                    <p>Calle Las Fragatas 204, Urb. San Pedro, Santiago de Surco, Lima</p>
                     <p style="margin-top:6px;">Referencia: altura cdra. 13 Av. Las Gaviotas. Disponibles de manera presencial o virtual.</p>
                     <div class="map-contact-detail">
                         <i class="fas fa-phone"></i>
@@ -483,7 +492,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <div class="logo-badge">P&amp;P</div>
+                        <img src="img/logo-pp.png" alt="Prada &amp; Paredes" class="logo-img" width="48" height="48" loading="lazy">
                         <div class="logo-text">
                             <span class="logo-main">Prada &amp; Paredes</span>
                             <span class="logo-sub">Soluciones Jurídico Empresariales</span>
@@ -529,7 +538,7 @@
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Calle Las Frágatas 204, Urb. San Pedro, Santiago de Surco, Lima</span>
+                        <span>Calle Las Fragatas 204, Urb. San Pedro, Santiago de Surco, Lima</span>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-globe"></i>
